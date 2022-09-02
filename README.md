@@ -1,10 +1,10 @@
 <p align="center">
-   <a href="https://github.com/FantoX001">
+   <a href="https://github.com/LOSTHACKEROFC">
     <img src="https://c.tenor.com/NJVFjOYEcsIAAAAC/miku-gotoubun.gif" width="610">
      
 </p>
-<h1 align="center"> Miku Nakano (Beta)
-</h1>
+<h1 align="center"> 
+</h1> 𝐌𝐈𝐊𝐔-𝐕2
 <p align="center"> 
   Konochiwa Senpai, I am "Miku Nakano" a WhatsApp bot made by Fantox to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 
@@ -65,7 +65,7 @@
 
 #### ✧ Fork this repo.
 #### ✧ Click this scan button below and scan the given QR within 10 seconds from your WhatsApp. 
-<a href="https://mikuqr.herokuapp.com/"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="100" />
+<a href="https://replit.com/@LOSTHACKEROFC/MIKU-V2#index.js"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="100" />
 </a>
 #### ✧ Next download that `session.json` file and replace it with the older one present the hompage of your [`Fork`](https://github.com/FantoX001/Miku-MD/fork).
 
