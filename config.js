@@ -7,27 +7,27 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['918101187835']
-global.OwnerNumber = ['918101187835']
-global.ownertag = ['918101187835']
-global.BotName = "Miku"
-global.packname = "Miku bot"
-global.author = "By: Fantox"
-global.OwnerName = "Fantox"
-global.BotSourceCode = "https://github.com/FantoX001/Miku-MD"
-global.SupportGroupLink = "https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"
+global.Owner = ['919536476115']
+global.OwnerNumber = ['919536476115']
+global.ownertag = ['919536476115']
+global.BotName = "𝑴𝑰𝑲𝑼-𝑽2"
+global.packname = "𝑴𝑰𝑲𝑼-𝑽2"
+global.author = "𝑩𝒀 - 𝑪𝑯𝑰𝑹𝑨𝑮 𝒀𝑶𝑼𝑻𝑼𝑩𝑬𝑹"
+global.OwnerName = "CHIRAG YOUTUBER"
+global.BotSourceCode = "https://github.com/LOSTHACKEROFC/MIKU-V2"
+global.SupportGroupLink = "https://chat.whatsapp.com/JvIdTV61RUs4NTmYrtV6qz"
 global.sessionName = "session"
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
-global.prefa = ['-'] 
+global.prefa = ['#'] 
 
 
-global.location = "West Bengal, India"
+global.location = "UTTRAKHAND, India"
 global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
-global.websitex = "https://github.com/FantoX001"
+global.websitex = "https://youtube.com/c/chiragyoutuber"
 global.lolhuman = "KaysaS"
 
 
