@@ -10,20 +10,20 @@
 
 <p align="center">
   <a href="https://github.com/LOSTHACKEROFC/MIKU-V2/fork">
-    <img src="https://img.shields.io/github/forks/FantoX001/Miku-MD?label=Fork&style=social">
+    <img src="https://img.shields.io/github/forks/LOSTHACKEROFC/MIKU-V2?label=Fork&style=social">
     
     
-  <a href="https://github.com/FantoX001/Miku-MD/stargazers">
-    <img src="https://img.shields.io/github/stars/FantoX001/Miku-MD?style=social">
+  <a href="https://github.com/LOSTHACKEROFC/MIKU-V2/stargazers">
+    <img src="https://img.shields.io/github/stars/LOSTHACKEROFC/MIKU-V2?style=social">
   </a>
 
 <p align="center">
-  <a href="https://github.com/FantoX001/Miku-MD">
+  <a href="https://github.com/LOSTHACKEROFC/MIKU-V2">
     <img src="https://visitor-badge.glitch.me/badge?page_id=https://github.com/FantoX001/Miku-MD.visitor-badge&left_text=Total%20Repo%20Visits">
     
     
-<a href="https://github.com/FantoX001">
-    <img src="(https://visitor-badge.glitch.me/badge?page_id=https://github.com/FantoX001/Shikimori-MD.visitor-badge&left_text=Total%20Repo%20Visitors)">
+<a href="https://github.com/LOSTHACKEROFC">
+    <img src="(https://visitor-badge.glitch.me/badge?page_id=https://github.com/LOSTHACKEROFC/TINA.visitor-badge&left_text=Total%20Repo%20Visitors)">
   </a>
 </br>
       
@@ -36,18 +36,18 @@
 
 
 ### ✧ Deploy Video tutorial:
-- Here's the [video tutorial](https://youtu.be/fZdM7Ahb4JE) on how to deploy and host Miku bot.
-- [Video Guide](https://youtu.be/fZdM7Ahb4JE)
+- Here's the [video tutorial](https://youtube.com/c/chiragyoutuber) on how to deploy and host Miku bot.
+- [Video Guide](https://youtube.com/c/chiragyoutuber)
 </br>
 
 
-## ✧✧✧ Why use Miku as your Base?
+## ✧✧✧ Why use MIKU-V2 as your Base?
 
 ```
 1. Copyright Free.
 2. No Source Code Encryption.
 3. Most commands.
-4. Singe prefix ("-").
+4. Singe prefix ("#").
 5. Self restoration.
 6. No API key needed!
 7. Full premission to Recode.
@@ -67,13 +67,13 @@
 #### ✧ Click this scan button below and scan the given QR within 10 seconds from your WhatsApp. 
 <a href="https://replit.com/@LOSTHACKEROFC/MIKU-V2#index.js"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="100" />
 </a>
-#### ✧ Next download that `session.json` file and replace it with the older one present the hompage of your [`Fork`](https://github.com/FantoX001/Miku-MD/fork).
+#### ✧ Next download that `session.json` file and replace it with the older one present the hompage of your [`Fork`](https://github.com/LOSTHACKEROFC/MIKU-V2/fork).
 
-#### ✧ After that edit the `README.md` file and change the template link present on line no:`39` with your forked repo link.(Example: `https://github.com/<your GitHub username>/Miku-MD`)
+#### ✧ After that edit the `README.md` file and change the template link present on line no:`39` with your forked repo link.(Example: `https://github.com/<your GitHub username>/MIKU-V2`)
 
 #### ✧ Next
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FantoX001/Miku-MD)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LOSTHACKEROFC/MIKU-V2)
 
 
 ## ✧✧✧ Heroku Deployment Method 2:
@@ -105,13 +105,13 @@ heroku/nodejs
 
 ## ✧✧✧ Join My Whatsapp Group for Support
 
-<a href="https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"><img src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="[https://chat.whatsapp.com/JvIdTV61RUs4NTmYrtV6qz]"><img src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </a>
 
 ## ✧✧✧ CMD Deployment Method
 ```
-git clone https://github.com/FantoX001/Miku-MD.git
-cd Miku-MD
+git clone https://github.com/LOSTHACKEROFC/MIKU-V2.git
+cd MIKU-V2
 npm start
 ```
 
@@ -134,8 +134,8 @@ pkg install nodejs -y
 pkg install ffmpeg -y 
 pkg install wget
 pkg install imagemagick -y
-git clone https://github.com/FantoX001/Miku-MD
-cd Miku-MD
+git clone https://github.com/LOSTHACKEROFC/MIKU-V2
+cd MIKU-V2
 npm start
 ```
 
@@ -148,8 +148,8 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ## ✧✧✧ License and recode Permission:
 - Well, it's the most asked question !
 - And the answer is `"Permission is hereby granted for 100% modification/recode."`
-- And this project comes under [`MIT`](https://github.com/FantoX001/Miku-MD/blob/main/LICENSE.md) lincense.
-- Please at least [`Follow`](https://github.com/FantoX001/#follow) me on GitHub to show some appreciation.
+- And this project comes under [`MIT`](https://github.com/LOSTHACKEROFC/MIKU-V2/blob/main/LICENSE.md) lincense.
+- Please at least [`Follow`](https://github.com/LOSTHACKEROFC/#follow) me on GitHub to show some appreciation.
    
    
 ## ✧ Reminder:
@@ -165,13 +165,13 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 
 ## ✧ Help Me:
-- [`Follow`](https://github.com/FantoX001/#follow) me on GitHub to make me feel motivated.
+- [`Follow`](https://github.com/LOSTHACKEROFC/#follow) me on GitHub to make me feel motivated.
 - Give my project a ⭐ if you liked it.
 
      
 ## ✧ Credits and Appreciation:
 
 -   `Adiwajshing` sir for [Baileys](https://github.com/adiwajshing/baileys).
--   `Arus~Bots` team for [Mizuhara](https://github.com/Arus-Bots/Mizuhara).
--   `Xeon` for [Cheems](https://github.com/DGXeon/CheemsBot-MD2).
--   `Zhwzein` for [Killua](https://github.com/zhwzein/Killua-Zoldyck)
+-   `CHIRAG YOUTUBER` team for [TINA](https://github.com/LOSTHACKEROFC/TINA).
+-   `INSTAGRAM` for [INSTA](https://instagram.com/chirag__bhatnagar).
+-   `YOUTUBE` for [YOUTUBE](https://youtube.com/c/chiragyoutuber)
