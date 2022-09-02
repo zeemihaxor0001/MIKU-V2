@@ -174,7 +174,6 @@ var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == '
 var budy = (typeof m.text == 'string' ? m.text : '')
 const prefix = global.prefa
 const isCmd = body.startsWith(prefix)
-const notCmd = body.startsWith('')
 const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
 const args = body.trim().split(/ +/).slice(1)
 const pushname = m.pushName || "No Name"
@@ -235,17 +234,6 @@ const isImage = (m.type === 'imageMessage')
         const isQuotedTag = m.mtype === 'extendedTextMessage' && content.includes('mentionedJid')
         const isQuotedProd = m.mtype === 'extendedTextMessage' && content.includes('productMessage')
         const isQuotedReply = m.mtype === 'extendedTextMessage' && content.includes('Message')
-
-
-
-// DM chatbot
-
-if (!isCmd && !m.isGroup){
-    const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168758&key=Ci7eNhtxpxxDB5FQ&uid=[uid]&msg=[${budy}]`)
-    txt = `${botreply.data.cnt}`
-    m.reply(txt)
-    }
-
 
 
 _sewa.expiredCheck(Miku, sewa)
@@ -735,22 +723,22 @@ user.afkReason = ''
 
 if (m.mtype === 'groupInviteMessage') {
 teks = `I can't join the group untill my *Owner* ask me to join. Type *-owner* to get owner number and ask him.`
-sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'), `${watermark}`, `${BotName}`, "916909137213@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
+sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'), `${watermark}`, `${BotName}`, "919536476115@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
 }
 
 
 if (AntiLink) {
     linkgce = await Miku.groupInviteCode(from)
     if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-    reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be because you sent this group's link.`)
+    reply(`\`\`\`「 ⚠️  𝑨𝑵𝑻𝑰𝑳𝑰𝑵𝑲 𝑺𝒀𝑺𝑻𝑬𝑴 ⚠️  」\`\`\`\n\nNo action will be because you sent this group's link.`)
     } else if (isUrl(m.text)) {
-    bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nAdmin has sent a link so no action is taken.`
+    bvl = `\`\`\`「 ⚠️ 𝑨𝑵𝑻𝑰𝑳𝑰𝑵𝑲 𝑺𝒀𝑺𝑻𝑬𝑴 ⚠️  」\`\`\`\n\nAdmin has sent a link so no action is taken.`
     if (isAdmins) return reply(bvl)
     if (m.key.fromMe) return reply(bvl)
     if (isCreator) return reply(bvl)
     kice = m.sender
     await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-    Miku.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+    Miku.sendMessage(from, {text:`\`\`\`「 ⚠️ 𝑨𝑵𝑻𝑰𝑳𝑰𝑵𝑲 𝑺𝒀𝑺𝑻𝑬𝑴 ⚠️  」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
     } else {
     }
     }
@@ -1201,15 +1189,15 @@ let cron = require('node-cron')
                   key: { 
                         fromMe: false,
                        participant: `0@s.whatsapp.net`, ...(from ? 
-                  { remoteJid: "916909137213-1613049930@g.us" } : {}) 
+                  { remoteJid: "919536476115-1613049930@g.us" } : {}) 
                                },
                   message: { 
                                 "videoMessage": { 
-                                "title": `Miku`,
-                                "h": `Miku`,
+                                "title": `𝑴𝑰𝑲𝑼-𝑽2`,
+                                "h": `𝑴𝑰𝑲𝑼-𝑽2`,
                                 'duration': '99999', 
                                 'gifPlayback': 'true', 
-                                'caption': `Fantox`,
+                                'caption': `CHIRAG YOUTUBER`,
                                 'jpegThumbnail': fs.readFileSync('./Assets/miku.mp4')
                                        }
                                       }
@@ -1262,7 +1250,7 @@ const ftroli = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "916909137213-1613049930@g.us" } : {}) 
+  { remoteJid: "919536476115-1613049930@g.us" } : {}) 
   },
   message: { 
   "videoMessage": { 
@@ -1283,7 +1271,7 @@ const ftroli = {
   },
   "message": {
   "groupInviteMessage": {
-  "groupJid": "916909137213-1616169743@g.us",
+  "groupJid": "91919536476115-1616169743@g.us",
   "inviteCode": `${global.OwnerName}`,
   "groupName": `${global.BotName}`, 
   "caption":`${global.WaterMark}`, 
@@ -1296,7 +1284,7 @@ const ftroli = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "916909137213-1613049930@g.us" } : {}) 
+  { remoteJid: "919536476115-1613049930@g.us" } : {}) 
   },
   message: { 
    "videoMessage": { 
@@ -1314,7 +1302,7 @@ const ftroli = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "916909137213-1613049930@g.us" } : {}) 
+  { remoteJid: "919536476115-1613049930@g.us" } : {}) 
   },
   message: { 
   "extendedTextMessage": {
@@ -1329,7 +1317,7 @@ const ftroli = {
   key: { 
   fromMe: false,
   participant: `0@s.whatsapp.net`, ...(from ? 
-  { remoteJid: "916909137213-1613049930@g.us" } : {}) 
+  { remoteJid: "919536476115-1613049930@g.us" } : {}) 
   },
   message: { 
   "audioMessage": {
@@ -1354,9 +1342,9 @@ const ftroli = {
 
 
     const menulist = `
-    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Fantox to take your WhatsApp usage into next level.
+    𝑯𝑬𝑳𝑳𝑶 𝑴𝒀 𝑩𝑨𝑩𝒀 𝑮𝑰𝑹𝑳 ❤︎❦︎${pushname} 𝑲𝑨𝑰𝑺𝑰 𝑯𝑶 👋㋛︎. 𝐼 𝐴𝑀 ${global.BotName},  𝑩𝑶𝑻 𝑪𝑹𝑬𝑨𝑻𝑶𝑹➪: 𝑪𝑯𝑰𝑹𝑨𝑮 𝒀𝑶𝑼𝑻𝑼𝑩𝑬𝑹 ✌︎𝐓𝐀𝐊𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐔𝐒𝐀𝐆𝐄 𝐈𝐍𝐓𝐎 𝐍𝐄𝐗𝐓 𝐋𝐄𝐕𝐄𝐋𖣘✪.
         
-       「 System Info 」
+       「 ꧁ՏYՏTᗴᗰ IᑎᖴO꧂ 」
     
     Speed : ${latensie.toFixed(4)} miliseconds
     Up Time : ${runtime(process.uptime())}
@@ -1366,14 +1354,14 @@ const ftroli = {
     𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}
     
     
-       「 User Info 」
+       「 ☞︎︎︎𝗨𝗦𝗘𝗥 𝗜𝗡𝗙𝗢☜︎︎︎ 」
     
     User Level: ${levelMenu}
     User XP : ${xpMenu} \ ${reqXp}
     User Role : ${role}
     
     
-       「 User Bank 」
+       「 ☞︎︎︎𝗨𝗦𝗘𝗥 𝗕𝗔𝗡𝗞☜︎︎︎ 」
     
     User Balance : ${uangku}
     Iron : ${getBesi(m.sender)}
@@ -1382,9 +1370,9 @@ const ftroli = {
     Potion : ${getPotion(m.sender)}
     
     
-    Type *-menu* or press any button below to start using *${global.BotName}*
+    TYPE *#𝑀𝐸𝑁𝑈* 𝒐𝒓 𝒑𝒓𝒆𝒔𝒔 𝒂𝒏𝒚 𝒃𝒖𝒕𝒕𝒐𝒏 𝒃𝒆𝒍𝒐𝒘 𝒕𝒐 𝒔𝒕𝒂𝒓𝒕 𝒖𝒔𝒊𝒏𝒈 *${global.BotName}*
     
-    ©️ *${global.BotName}* All Rights Reserved by: *Fantox*
+    ©️ *${global.BotName}* 𝑨𝑳𝑳 𝑹𝑰𝑮𝑯𝑻𝑺 𝑹𝑬𝑽𝑬𝑹𝑺𝑬𝑫 𝑩𝒀 ☞︎︎︎: 𝐂𝐇𝐈𝐑𝐀𝐆 𝐘𝐎𝐔𝐓𝐔𝐁𝐄𝐑😇🤪
     `
         const qtod = m.quoted? "true":"false"
         
@@ -1403,7 +1391,7 @@ switch(command) {
     if (isBanChat) return reply(mess.bangc)
     teks = `*${global.BotName}'s Script*\n\n*GitHub*: ${global.BotSourceCode}\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
     let buttons = [
-    {buttonId: `-menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
+    {buttonId: `-menu`, buttonText: {displayText: '💥Bot Menu💥'}, type: 1}
     ]
     let buttonMessage = {
     image: Thumb,
@@ -1413,7 +1401,7 @@ switch(command) {
     buttons: buttons,
     headerType: 4,
     /*contextInfo:{externalAdReply:{
-    title:"Powered by Fantox",
+    title:"Powered by 𝑪𝑯𝑰𝑹𝑨𝑮 𝒀𝑶𝑼𝑻𝑼𝑩𝑬𝑹",
     body: " ", 
     thumbnail: fs.readFileSync("Assets/pic2.jpg"),
     mediaType:1,
@@ -1449,7 +1437,7 @@ case 'me': case 'profile': case 'p':
       pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
     }
 
-     const profilexx = `*「  Profile Info  」*\n\n*User Name* : ${pushname}\n*Bio* : ${bioo}\n*Group Admin Status* : ${adn}\n*Level* : ${levelMenu}\n*Exp* : ${xpMenu} out of ${reqXp}\n*Role* : ${role}`
+     const profilexx = `*「 ☞︎︎︎ 𝐏𝐑𝐎𝐅𝐈𝐋𝐄 𝐈𝐍𝐅𝐎 ☜︎︎︎  」*\n\n*User Name* : ${pushname}\n*Bio* : ${bioo}\n*Group Admin Status* : ${adn}\n*Level* : ${levelMenu}\n*Exp* : ${xpMenu} out of ${reqXp}\n*Role* : ${role}`
  
 
 
@@ -1509,13 +1497,13 @@ if (isBanChat) return reply(mess.banChat)
 reply(` Don't forget to join yeah!
 
 *GROUP 1*
-https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS
+https://chat.whatsapp.com/JvIdTV61RUs4NTmYrtV6qz
 
 *GROUP 2*
-https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5
+https://chat.whatsapp.com/JvIdTV61RUs4NTmYrtV6qz
 
 *GROUP 3*
-https://chat.whatsapp.com/EcycNbJFCVT5ZsG9xIGkqd`)
+https://chat.whatsapp.com/JvIdTV61RUs4NTmYrtV6qz`)
 break
 case 'getsxvdxcmd': {
 if (isBan) return reply(mess.ban)	 			
@@ -1529,25 +1517,76 @@ break
 
 case 'support': case 'supportgc':
     
-    reply(`*My developer's group:* http://gg.gg/MikuSupport`)
+    reply(`*𝐌𝐘 𝐃𝐄𝐕𝐋𝐎𝐏𝐄𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝑫𝑶 𝑵𝑶𝑻 𝑭𝑶𝑹𝑮𝑬𝑻 𝑻𝑶 𝑺𝑼𝑩𝑺𝑪𝑹𝑰𝑩𝑬 ➪:* http://youtube.com/c/chiragyoutuber.`)
     break
 
 case 'repo': case 'botrepo':
     
-    reply(`*My Source Code:* https://github.com/FantoX001/Miku-MD`)
+    reply(`*𝐌𝐘 𝐒𝐎𝐔𝐑𝐂𝐄 𝐂𝐎𝐃𝐄:* https://github.com/LOSTHACKEROFC`)
     break
 
 case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━━━━〈  📛 NSFW Menu 📛  〉━━━━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
+        reply(` *━━━━━━〈  📛 𝐍𝐒𝐅𝐖 𝐌𝐄𝐍𝐔 📛  〉━━━━━━*\n\n🤤➪𝐇𝐄𝐍𝐓𝐀𝐈𝐕𝐈𝐃𝐄𝐎
+🤤➪𝐁𝐋𝐎𝐖𝐉𝐎𝐁𝐆𝐈𝐅
+🤤➪𝐇𝐍𝐄𝐊𝐎
+🤤➪𝐌𝐀𝐒𝐓𝐔𝐑𝐁𝐀𝐓𝐈𝐎𝐍
+🤤➪𝐓𝐇𝐈𝐆𝐇𝐒
+🤤➪𝐏𝐔𝐒𝐒𝐘
+🤤➪𝐏𝐀𝐍𝐓𝐈𝐄𝐒
+🤤➪𝐎𝐑𝐆𝐘
+🤤➪𝐀𝐇𝐄𝐆𝐀𝐎
+🤤➪𝐀𝐒𝐒
+🤤➪𝐁𝐃𝐒𝐌
+🤤➪𝐁𝐋𝐎𝐖𝐉𝐎𝐁
+🤤➪𝐂𝐔𝐂𝐊𝐎𝐋𝐃
+🤤➪𝐄𝐑𝐎
+🤤➪𝐆𝐀𝐒𝐌
+🤤➪𝐂𝐔𝐌
+🤤➪𝐅𝐄𝐌𝐃𝐎𝐌
+🤤➪𝐅𝐎𝐎𝐓
+🤤➪𝐆𝐀𝐍𝐆𝐁𝐀𝐍𝐆
+🤤➪𝐆𝐋𝐀𝐒𝐒𝐄𝐒
+🤤➪𝐉𝐀𝐇𝐘
+🤤➪𝐓𝐑𝐀𝐏
+🤤➪𝐁𝐋𝐎𝐖𝐉𝐎𝐁𝐆𝐈𝐅
+🤤➪𝐒𝐏𝐀𝐍𝐊
+🤤➪𝐇𝐍𝐄𝐊𝐎 
+🤤➪𝐇𝐄𝐍𝐊𝐎
+🤤➪𝐇𝐖𝐀𝐈𝐅𝐔
+🤤➪𝑮𝑨𝑺𝑴`)
     break
 
 case 'reaction': case 'react': case 'reactions':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-            reply(` *━━━━━━〈  📍 Reactions 📍  〉━━━━━━*\n\nbonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe`)
+            reply(` *━━━━━━〈  📍 𝐑𝐄𝐀𝐂𝐓𝐈𝐎𝐍𝐒 📍  〉━━━━━━*\n\n🎃𝐁𝐎𝐍𝐊
+🎃➪𝐂𝐑𝐘
+🎃➪𝐁𝐔𝐋𝐋𝐘
+🎃➪𝐂𝐔𝐃𝐃𝐋𝐄
+🎃➪𝐇𝐔𝐆
+🎃➪𝐊𝐈𝐒𝐒
+🎃➪𝐋𝐈𝐂𝐊
+🎃➪𝐏𝐀𝐓
+🎃➪𝐒𝐌𝐔𝐆
+🎃➪𝐘𝐄𝐄𝐓
+🎃➪𝐁𝐋𝐔𝐒𝐇
+🎃➪𝐒𝐌𝐈𝐋𝐄
+🎃➪𝐖𝐀𝐕𝐄
+🎃➪𝐇𝐈𝐆𝐇𝐅𝐈𝐕𝐄
+🎃➪𝐇𝐀𝐍𝐃𝐇𝐎𝐋𝐃
+🎃➪𝐍𝐎𝐌
+🎃➪𝐆𝐋𝐎𝐌𝐏
+🎃➪𝐁𝐈𝐓𝐄
+🎃➪𝐒𝐋𝐀𝐏
+🎃➪𝐊𝐈𝐋𝐋
+🎃➪𝐇𝐀𝐏𝐏𝐘
+🎃➪𝐖𝐈𝐍𝐊
+🎃➪𝐏𝐎𝐊𝐄
+🎃➪𝐃𝐀𝐍𝐂𝐄
+🎃➪𝐂𝐑𝐈𝐍𝐆𝐄`)
         break   
     
 
@@ -2142,8 +2181,8 @@ await Miku.sendMessage(m.chat, { delete: key })
  replay('Deactivated telegram antilink in this group')
  } else {
    let buttonsntilink = [
-   { buttonId: `-antilinktelegram on`, buttonText: { displayText: 'On' }, type: 1 },
-   { buttonId: `-antilinktelegram off`, buttonText: { displayText: 'Off' }, type: 1 }
+   { buttonId: `-antilinktelegram on`, buttonText: { displayText: '𝐎𝐍' }, type: 1 },
+   { buttonId: `-antilinktelegram off`, buttonText: { displayText: '𝐎𝐅𝐅' }, type: 1 }
    ]
    await Miku.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off `, `${global.BotName}`, m)
    }
@@ -2175,8 +2214,8 @@ await Miku.sendMessage(m.chat, { delete: key })
  replay('Deactivated tiktok antilink !')
  } else {
    let buttonsntilink = [
-   { buttonId: `-antilinktiktok on`, buttonText: { displayText: 'On' }, type: 1 },
-   { buttonId: `-antilinktiktok off`, buttonText: { displayText: 'Off' }, type: 1 }
+   { buttonId: `-antilinktiktok on`, buttonText: { displayText: '𝐎𝐍' }, type: 1 },
+   { buttonId: `-antilinktiktok off`, buttonText: { displayText: '𝐎𝐅𝐅' }, type: 1 }
    ]
    await Miku.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
    }
@@ -2500,111 +2539,6 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
-/*
-     case 'purge':{
-        if (isBan) return reply(mess.banned)	 			
-     if (isBanChat) return reply(mess.bangc)
-     if (!m.isGroup) return replay(mess.grouponly)
-     if (!isBotAdmins) return replay(mess.botadmin)
-     if (!isAdmins && !isCreator) return replay(mess.useradmin)
-
-        const delay = time => new Promise(res=>setTimeout(res,time));
-
-        let users = (await Miku.fetchGroupMetadataFromWA(m.chat)).participants.map(u => u.jid)
-        for (let user of users){
-
-            await Miku.groupParticipantsUpdate(m.chat, [user], 'remove')
-            await delay(3000)
-        }
-    }
-     break
-
-*/
-
-case 'purge':{mess
-    if (isBan) return reply(mess.banned)	 			
-     if (isBanChat) return reply(mess.bangc)
-     if (!m.isGroup) return replay(mess.grouponly)
-     if (!isBotAdmins) return replay(mess.botadmin)
-     if (!isAdmins && !isCreator) return replay(mess.useradmin)
-const delay = time => new Promise(res=>setTimeout(res,time));
-let mentioned = participants.map(v => v.jid)
-      for (let member of mentioned) {     
-      Miku.groupParticipantsUpdate(m.chat, [member], 'remove')
-      }
-    }
-
-    break
-
-
-
-
-    case 'nowa':  case 'stalk': case 'stalknumber':{
-        if (isBan) return reply(mess.banned)
-        if (!args[0]) return reply(`Use command like: ${prefix}stalk <number>xxx`)
-        var inputnumber = args[0]
-        if (!inputnumber.includes('x')) return reply('You didnot added x')
-        reply(`Searching for WhatsApp account in given range...`)
-        reply(`Please wait while i fetch details...`)
-        function countInstances(string, word) {
-        return string.split(word).length - 1;
-        }
-        var number0 = inputnumber.split('x')[0]
-        var number1 = inputnumber.split('x')[countInstances(inputnumber, 'x')] ? inputnumber.split('x')[countInstances(inputnumber, 'x')] : ''
-        var random_length = countInstances(inputnumber, 'x')
-        var randomxx;
-        if (random_length == 1) {
-            randomxx = 10
-        } else if (random_length == 2) {
-            randomxx = 100
-        } else if (random_length == 3) {
-            randomxx = 1000
-        }
-        var nomerny = `*『 List of Whatsapp Numbers 』*\n\n`
-        var nobio = `\n*Bio:* || \nHey there! I am using WhatsApp.\n`
-        var nowhatsapp = `\n*Numbers with no WhatsApp account within the range you provided*\n`
-        for (let i = 0; i < randomxx; i++) {
-        var nu = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-        var status1 = nu[Math.floor(Math.random() * nu.length)]
-        var status2 = nu[Math.floor(Math.random() * nu.length)]
-        var status3 = nu[Math.floor(Math.random() * nu.length)]
-        var dom4 = nu[Math.floor(Math.random() * nu.length)]
-        var rndm;
-        if (random_length == 1) {
-        rndm = `${status1}`
-        } else if (random_length == 2) {
-        rndm = `${status1}${status2}`
-        } else if (random_length == 3) {
-        rndm = `${status1}${status2}${status3}`
-        } else if (random_length == 4) {
-        rndm = `${status1}${status2}${status3}${dom4}`
-        }
-        var anu = await Miku.onWhatsApp(`${number0}${i}${number1}@s.whatsapp.net`);
-        var anuu = anu.length !== 0 ? anu : false
-        try {
-        try {
-        var anu1 = await Miku.fetchStatus(anu[0].jid)
-        } catch {
-        var anu1 = '401'
-        }
-        if (anu1 == '401' || anu1.status.length == 0) {
-        nobio += `wa.me/${anu[0].jid.split("@")[0]}\n`
-        } else {
-        nomerny += `🎀 *Number:* wa.me/${anu[0].jid.split("@")[0]}\n🔹 *Bio :* ${anu1.status}\n🔸 *Updated On :* ${moment(anu1.setAt).tz('Asia/Kolkata').format('HH:mm:ss DD/MM/YYYY')}\n\n`
-        }
-        } catch {
-        nowhatsapp += `${number0}${i}${number1}\n`
-        }
-        }
-        reply(`${nomerny}${nobio}${nowhatsapp}`)
-        }
-        break
-
-
-
-
-
-
 
  case 'grouplink': case 'gclink': {
     if (isBan) return reply(mess.banned)	 			
@@ -2737,9 +2671,9 @@ let mentioned = participants.map(v => v.jid)
      sendOrder(m.chat, teks, "667140254502463", fs.readFileSync('./Assets/pic7.jpg'), `${global.packname}`, `${global.BotName}`, "916909137213@s.whatsapp.net", "AR6NCY8euY5cbS8Ybg5Ca55R8HFSuLO3qZqrIYCT7hQp0g==", "99999999999999999999")
      } else if (sizny > 20) {
      await Miku.groupAcceptInvite(vcc).then(async(res) => replay(jsonformat(res))).catch(_ => _)
-     replay("Joined !")
+     replay("𝐉𝐎𝐈𝐍 𝐊𝐑 𝐋𝐈𝐘𝐀 𝐆𝐑𝐏 𝐎𝐑 𝐁𝐓𝐀😎")
      } else {
-     replay("Error")
+     replay("𝐄𝐑𝐑𝐎𝐑 𝐀𝐀 𝐆𝐀𝐘𝐀 𝐁𝐄🙂")
      }
      }).catch(_ => _)
      }
@@ -2857,7 +2791,7 @@ case 'public': {
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.owner)
  Miku.public = true
- reply('I am now Publicly accessable!')
+ reply('𝐏𝐔𝐁𝐋𝐈𝐂 𝐔𝐒𝐄 𝐊𝐑 𝐒𝐊𝐓𝐈 𝐌𝐄𝐑𝐄 𝐊𝐎🤪')
  Miku.setStatus(`Mode : Public`)
  }
  break
@@ -2867,7 +2801,7 @@ case 'public': {
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.botowner)
  Miku.public = false
- reply('Only Owner can use me now!')
+ reply('𝐀𝐁 𝐒𝐄𝐋𝐅 𝐇𝐎 𝐆𝐀𝐘𝐀 𝐎𝐖𝐍𝐄𝐑 𝐊𝐈 𝐒𝐔𝐍𝐔𝐆𝐀 𝐁𝐒😁😁')
  Miku.setStatus(`Mode : Self`)
  }
  break
@@ -3281,7 +3215,7 @@ case 'fbddlxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
- {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `-menu`, buttonText: {displayText: '💥Menu💥'}, type: 1}
  ]
  let buttonMessage = {
  video: {url:args[0]},
@@ -3372,7 +3306,6 @@ case 'play2': case 'ytplay2': {
                     let buttonMessage = {
                         image: { url: anu.thumbnail},
                         caption: `「 _Miku Youtube Player_ 」
-
     Title : ${anu.title}
     ID : ${anu.videoId}
     Duration : ${anu.timestamp}
@@ -3698,6 +3631,17 @@ var { kasus, kematian, sembuh } = c[0]
 Miku.sendMessage(from, {text : `Case : ${kasus}\n\nDead : ${kematian}\n\nHealed : ${sembuh}`}, m)
 break
 
+case 'playstore': case 'apk':
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if(!q) return reply('Pls enter a search term!')
+let play = await hx.playstore(q)
+let storee = '─────────────────────\n'
+for (let i of play){
+storee += `\n「  *Google Play*  」\n\n*Name* : ${i.name}\n*Link* : ${i.link}\n*Dev* : ${i.developer}*Dev Link* : ${i.link_dev}\n─────────────────────`
+}
+reply(storee)
+break
 
 case 'couple': case 'ship': {
     if (isBan) return reply(mess.banned)
@@ -3736,7 +3680,7 @@ break
 case 'handsomecheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+				if (!text) return replay(`Tag Someone, Example : ${prefix + command} *@CHIRAG YOUTUBER*`)
 					const gan = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const teng = gan[Math.floor(Math.random() * gan.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*` }, { quoted: m })
@@ -3744,7 +3688,7 @@ Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*
 case 'beautifulcheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+				if (!text) return replay(`Tag Someone, Example : ${prefix + command} *@CHIRAG YOUTUBER*`)
 					const can = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const tik = can[Math.floor(Math.random() * can.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${tik}%*` }, { quoted: m })
@@ -3761,7 +3705,7 @@ case 'awesomecheck':
                       case 'uglycheck':
                         if (isBan) return reply(mess.banned)
                         if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+				if (!text) return replay(`Tag Someone, Example : ${prefix + command} *@CHIRAG YOUTUBER*`)
 					const sangeh = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%*` }, { quoted: m })
@@ -3771,7 +3715,7 @@ Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%
 case 'charactercheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+					if (!text) return replay(`Tag Someone, Example : ${prefix + command} *@CHIRAG YOUTUBER*`)
 					const Mikutttt =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
 					const taky = Mikutttt[Math.floor(Math.random() * Mikutttt.length)]
 					Miku.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
@@ -3964,7 +3908,7 @@ case 'truth':
                  "do you play pubg, if you then send ur id number"
              ]
                            const mikutruthww = truth[Math.floor(Math.random() * truth.length)]
-                           buffer = await getBuffer(`https://wallpapercave.com/wp/wp10524609.jpg`)
+                           buffer = await getBuffer(`https://wallpapercave.com/w/wp6299641`)
                            Miku.sendMessage(from, { image: buffer, caption: '*You have chosen Truth*\n'+ mikutruthww }, {quoted:m})
                            break
 
@@ -4840,19 +4784,19 @@ for (let yoi of anu) {
 await sleep(1500)
 let btn = [{
 quickReplyButton: {
-displayText: '✨Menu✨',
+displayText: '🤖𝐌𝐄𝐍𝐔🤖',
 id: '-menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Bot Owner',
+displayText: '𝐁𝐎𝐓 𝐎𝐖𝐍𝐄𝐑♫︎㋛︎',
 id: '-owner'
 }
 }]
 let txt = `「 *${global.OwnerName}'s Broadcast* 」\n\n${text}`
 Miku.send5ButImg(yoi, txt, `${global.BotName}`, BotLogo, btn, Thumb)
 }
-replay('Broadcast Sent !')
+replay('𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 𝐒𝐄𝐍𝐓 😁 !')
 }
 break    
 
@@ -4861,91 +4805,413 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `Konichiwa *${pushname}* Senpai,
+ const helpmenu = `𝑯𝑬𝑳𝑳𝑶 𝑱𝑨𝑨𝑵*${pushname}* 𝑲𝑨𝑰𝑺𝑬 𝑯𝑶 𝑩𝑨𝑩𝒀 𝑮𝑰𝑹𝑳,
 
-I am *Miku Nakano*, a bot developed by *Fantox*.
+𝐈 𝐀𝐌 𝐌𝐈𝐊𝐔-𝐕2 𝐀𝐍𝐃 𝐌𝐘 𝐃𝐄𝐕𝐋𝐎𝐏𝐄𝐑 𝐈𝐒 ➪𝑪𝑯𝑰𝑹𝑨𝑮 𝒀𝑶𝑼𝑻𝑼𝑩𝑬𝑹 ❤️🥰
 
-🔰 My prefix is:  ${prefix}
+🔰 𝐌𝐲 𝐏𝐑𝐄𝐅𝐈𝐗 :  ${prefix}
 
-Here's the list of my Commands.
+𝐓𝐇𝐈𝐒 𝐈𝐒 𝐌𝐄𝐍𝐔 𝐎𝐅 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 👻
  
+𝐒𝐔𝐁𝐂𝐑𝐈𝐁𝐄 𝐍𝐎𝐖 : ${website}
 
+ *━━━━━━〈  🎆 𝐂𝐎𝐑𝐄 🎆  〉━━━━━━*
 
- *━━━━━━〈  🎆 Core 🎆  〉━━━━━━*
+💥𝐏𝐑𝐎𝐅𝐈𝐋𝐄 
 
-stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
+💥𝐇𝐄𝐋𝐏
+
+💥𝐃𝐄𝐋𝐄𝐓𝐄
+
+💥𝐃𝐄𝐋𝐄𝐓𝐄𝐀𝐋𝐋
+
+💥𝐋𝐈𝐒𝐓𝐆𝐂
+
+💥𝐋𝐈𝐒𝐓𝐏𝐂
+
+💥𝐖𝐄𝐋𝐂𝐎𝐌𝐄
+
+💥𝐒𝐔𝐏𝐏𝐎𝐑𝐓
+
+💥𝐑𝐄𝐏𝐎
+
+💥𝐒𝐂𝐑𝐈𝐏𝐓
  
- *━━━━━━〈  🎀 Owner 🎀  〉━━━━━━*
+ *━━━━━━〈  🎀 𝐐𝐖𝐍𝐄𝐑 🎀  〉━━━━━━*
 
-self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast 
+😎𝐒𝐄𝐋𝐅
 
- *━━━━━━〈  ⭕ Group ⭕  〉━━━━━━*
+😎𝐏𝐔𝐁𝐋𝐈𝐂
 
-promote, demote, revoke, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
+😎𝐁𝐀𝐍
 
- *━━━━━━〈  ➰ Anti Link ➰  〉━━━━━━*
+😎𝐁𝐀𝐍𝐆𝐑𝐎𝐔𝐏
+
+😎𝐁𝐘𝐄
+
+😎𝐉𝐎𝐈𝐍 
+
+😎𝐁𝐘𝐄
+
+😎𝐁𝐋𝐎𝐂𝐊
+
+😎𝐔𝐍𝐁𝐋𝐎𝐂𝐊
+
+😎𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓
+
+ *━━━━━━〈  ⭕ 𝐆𝐑𝐎𝐔𝐏 ⭕  〉━━━━━━*
+
+👻𝐏𝐑𝐎𝐌𝐎𝐓𝐄
+
+👻𝐃𝐄𝐌𝐎𝐓𝐄
+
+👻𝐑𝐄𝐕𝐎𝐊𝐄
+
+👻𝐑𝐄𝐌𝐎𝐕𝐄
+
+👻𝐓𝐀𝐆𝐀𝐋𝐋
+
+👻𝐇𝐈𝐃𝐄𝐓𝐀𝐆
+
+👻𝐆𝐑𝐎𝐔𝐏𝐒𝐄𝐓𝐓𝐈𝐍𝐆
+
+👻𝐆𝐑𝐎𝐔𝐏𝐋𝐈𝐍𝐊
+
+👻𝐒𝐄𝐓𝐆𝐂𝐏𝐏
+
+👻𝐒𝐄𝐓𝐍𝐀𝐌𝐄
+
+👻𝐒𝐄𝐓𝐃𝐄𝐒𝐂
+
+👻𝐆𝐑𝐎𝐔𝐏
+
+👻𝐍𝐒𝐅𝐖
+
+ *━━━━━━〈  ➰ 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊 ➰  〉━━━━━━*
  
-antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, antilinkfb, antilinktwit, antilinkall, antiwame
+😈𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊𝐆𝐂
 
- *━━━━━━〈  🔍 Search 🔍  〉━━━━━━*
+😈𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊𝐓𝐆
 
-play, song, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone   
+😈𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊𝐓𝐓
 
- *━━━━━━〈  🔰 Convert 🔰  〉━━━━━━*
+😈𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊𝐘𝐓𝐂𝐇
 
-sticker, toimg, tovideo, togif , steal, stickermeme, emojimix, tourl, tomp3, toaudio
+😈𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊𝐘𝐓𝐕𝐈𝐃
 
- *━━━━━━〈  🔉 Audio 🔉  〉━━━━━━*
+😈𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊𝐈𝐆
 
-bass, tempo, blown, deep, earrape, fast, fat, nightcore, reverse, robot, slow, squirrel
+😈𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊𝐅𝐁
 
- *━━━━━━〈  📍 Reactions 📍  〉━━━━━━*
+😈𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊𝐓𝐖𝐈𝐓
 
-bonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe
+😈𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊𝐀𝐋𝐋
 
- *━━━━━━〈  🌌 Downloader 🌌  〉━━━━━━*
+😈𝐀𝐍𝐓𝐈𝐖𝐀𝐌𝐄
 
-play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire  
+ *━━━━━━〈  🔍 𝐒𝐄𝐀𝐑𝐂𝐇 🔍  〉━━━━━━*
 
- *━━━━━━〈  🈴 Weeb 🈴  〉━━━━━━*
+😼𝐏𝐋𝐀𝐘
 
-crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
+😼𝐒𝐎𝐍𝐆
 
- *━━━━━━〈  ♨️ Informative ♨️  〉━━━━━━*
+😼𝐘𝐓𝐒
 
-animequote, quote, covid, earthquake, wiki
+😼𝐋𝐘𝐑𝐈𝐂𝐒
 
- *━━━━━━〈  🎗 Others 🎗  〉━━━━━━*
+😼𝐆𝐎𝐎𝐆𝐋𝐄
 
-stickermeme, quotes, darkjoke 
+😼𝐏𝐋𝐀𝐘𝐒𝐓𝐎𝐑𝐄
 
- *━━━━━━〈  🎐 Fun 🎐  〉━━━━━━*
+😼𝐆𝐈𝐌𝐀𝐆𝐄
 
-reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomecheck, greatcheck, gaycheck, cutecheck, lesbiancheck, hornycheck, prettycheck, lovelycheck, uglycheck, charactercheck
+😼𝐏𝐈𝐍𝐓𝐄𝐑𝐄𝐒𝐓
 
- *━━━━━━〈  🪁 Essentials 🪁  〉━━━━━━*
+😼𝐈𝐌𝐀𝐆𝐄
 
-translate, fliptext, toletter
+😼𝐌𝐎𝐕𝐈𝐄
 
- *━━━━━━〈  💥 NSFW 💥  〉━━━━━━*
+😼𝐖𝐀𝐋𝐋𝐏𝐄𝐑
 
-🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
+😼𝐒𝐄𝐀𝐑𝐂𝐇𝐆𝐂
 
-🍁 Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
+😼𝐇𝐀𝐏𝐏𝐘𝐌𝐎𝐃
 
+😼𝐖𝐈𝐊𝐈𝐌𝐄𝐃𝐈𝐀
 
+😼𝐑𝐈𝐍𝐆𝐓𝐎𝐍𝐄
+
+😼𝐀𝐍𝐈𝐌𝐄
+
+😼𝐀𝐍𝐈𝐌𝐄𝐒𝐓𝐎𝐑𝐘 
+
+😼𝐌𝐀𝐍𝐆𝐀
+
+😼𝐑𝐈𝐍𝐆𝐓𝐎𝐍𝐄
+
+ *━━━━━━〈  🔰 𝐂𝐎𝐍𝐕𝐄𝐑𝐓 🔰  〉━━━━━━*
+
+🌈𝐒𝐓𝐈𝐂𝐊𝐄𝐑
+
+🌈𝐓𝐎𝐈𝐌𝐆
+
+🌈𝐓𝐎𝐕𝐈𝐃𝐄𝐎
+
+🌈𝐓𝐎𝐆𝐈𝐅
+
+🌈𝐒𝐓𝐄𝐀𝐋
+
+🌈𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐌𝐄𝐌𝐄
+
+🌈𝐄𝐌𝐎𝐉𝐈𝐌𝐈𝐗
+
+🌈𝐓𝐎𝐔𝐑
+
+🌈𝐓𝐎𝐌𝐏3
+
+🌈𝐓𝐎𝐀𝐔𝐃𝐈𝐎
+
+ *━━━━━━〈  🔉 𝐀𝐔𝐃𝐈𝐎 🔉  〉━━━━━━*
+
+🌠𝐁𝐀𝐒𝐒
+
+🌠𝐓𝐄𝐌𝐏𝐎
+
+🌠𝐁𝐋𝐎𝐖𝐍
+
+🌠𝐃𝐄𝐄𝐏
+
+🌠𝐄𝐀𝐑𝐑𝐀𝐏𝐄
+
+🌠𝐅𝐀𝐒𝐓
+
+🌠𝐅𝐀𝐓
+
+🌠𝐍𝐈𝐆𝐇𝐓𝐂𝐎𝐑𝐄
+
+🌠𝐑𝐄𝐕𝐄𝐑𝐒𝐄
+
+🌠𝐑𝐎𝐁𝐎𝐓
+
+🌠𝐒𝐋𝐎𝐖
+
+🌠𝐒𝐐𝐔𝐈𝐑𝐑𝐄𝐋
+
+ *━━━━━━〈  📍 𝐑𝐄𝐀𝐂𝐓𝐈𝐎𝐍𝐒 📍  〉━━━━━━*
+
+🌊𝐁𝐎𝐍𝐊
+
+🌊𝐁𝐑𝐘
+
+🌊𝐁𝐔𝐋𝐋𝐘
+
+🌊𝐂𝐔𝐃𝐃𝐋𝐄
+
+🌊𝐇𝐔𝐆
+
+🌊𝐊𝐈𝐒𝐒
+
+🌊𝐋𝐈𝐂𝐊
+
+🌊𝐏𝐀𝐓
+
+🌊𝐒𝐌𝐔𝐆
+
+🌊𝐘𝐄𝐄𝐓
+
+🌊𝐁𝐋𝐔𝐒𝐇
+
+🌊𝐒𝐌𝐈𝐋𝐄
+
+🌊𝐖𝐀𝐕𝐄
+
+🌊𝐇𝐈𝐆𝐇𝐅𝐈𝐕𝐄
+
+🌊𝐇𝐀𝐍𝐃𝐇𝐎𝐋𝐃
+
+🌊𝐍𝐎𝐌
+
+🌊𝐆𝐋𝐎𝐌𝐏
+
+🌊𝐁𝐈𝐓𝐄
+
+🌊𝐒𝐋𝐀𝐏
+
+🌊𝐊𝐈𝐋𝐋
+
+🌊𝐇𝐀𝐏𝐏𝐘
+
+🌊𝐖𝐈𝐍𝐊
+
+🌊𝐏𝐎𝐊𝐄
+
+🌊𝐃𝐀𝐍𝐂𝐄
+
+🌊𝐂𝐑𝐈𝐍𝐆𝐄
+
+ *━━━━━━〈  🌌 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑 🌌  〉━━━━━━*
+
+📩𝐏𝐋𝐀𝐘
+
+📩𝐘𝐓𝐌𝐏3
+
+📩𝐘𝐓𝐌𝐏4
+
+📩𝐘𝐓𝐕𝐈𝐃𝐄𝐎
+
+📩𝐌𝐄𝐀𝐃𝐈𝐀𝐅𝐈𝐑𝐄
+
+📩𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌
+
+📩𝐈𝐆𝐓𝐕
+
+📩𝐅𝐀𝐂𝐄𝐁𝐎𝐎𝐊
+
+📩𝐅𝐁𝐌𝐏3
+
+📩𝐓𝐖𝐈𝐓𝐓𝐄𝐑
+
+📩𝐓𝐖𝐈𝐓𝐓𝐄𝐑𝐌𝐏3
+
+📩𝐓𝐈𝐊𝐓𝐎𝐊
+
+📩𝐓𝐈𝐊𝐓𝐎𝐊𝐀𝐔𝐃𝐈𝐎
+
+📩𝐓𝐈𝐊𝐓𝐎𝐊𝐍𝐎𝐖𝐍
+
+📩𝐌𝐄𝐃𝐈𝐀𝐅𝐈𝐑𝐄
+
+ *━━━━━━〈  🈴 𝐖𝐄𝐄𝐁 🈴  〉━━━━━━*
+
+🎯𝐂𝐑𝐎𝐒𝐏𝐋𝐀𝐘
+
+🎯𝐖𝐀𝐈𝐅𝐔
+
+🎯𝐋𝐎𝐋𝐈
+
+🎯𝐍𝐄𝐊𝐎
+
+🎯𝐏𝐏𝐂𝐎𝐔𝐏𝐋𝐄
+
+🎯𝐅𝐄𝐄𝐃
+
+🎯𝐅𝐎𝐗𝐆𝐈𝐑𝐋
+
+🎯𝐅𝐄𝐄𝐃
+
+🎯𝐌𝐄𝐎𝐖
+
+🎯𝐓𝐈𝐂𝐊𝐋𝐄
+
+🎯𝐖𝐀𝐋𝐋𝐏𝐄𝐑
+
+🎯𝐂𝐎𝐅𝐅𝐄𝐄
+
+🎯𝐀𝐍𝐈𝐌𝐄𝐍𝐎𝐌
+
+🎯𝐖𝐀𝐈𝐅𝐔3
+
+🎯𝐍𝐄𝐊𝐎2
+
+🎯𝐅𝐄𝐄𝐃
+
+🎯𝐌𝐄𝐎𝐖
+
+🎯𝐓𝐈𝐂𝐊𝐋𝐄
+
+🎯𝐌𝐈𝐆𝐔𝐌𝐈𝐍
+
+🎯𝐀𝐖𝐎𝐎
+
+🎯𝐀𝐍𝐈𝐌𝐄𝐖𝐀𝐋𝐋𝐏𝐄𝐑2
+
+🎯𝐀𝐍𝐈𝐌𝐄
+
+🎯𝐌𝐀𝐍𝐆𝐀
+
+ *━━━━━━〈  ♨️ 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐕𝐄 ♨️  〉━━━━━━*
+
+🕸️𝐀𝐍𝐈𝐌𝐄𝐐𝐔𝐎𝐓𝐄
+
+🕸️𝐐𝐔𝐎𝐓𝐄𝐒
+
+🕸️𝐂𝐎𝐕𝐈𝐃
+
+🕸️𝐄𝐀𝐑𝐓𝐇𝐐𝐔𝐀𝐊𝐄
+
+🕸️𝐖𝐈𝐊𝐈
+
+ *━━━━━━〈  🎗 𝐎𝐓𝐇𝐄𝐑 🎗  〉━━━━━━*
+
+🤖𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐌𝐄𝐌𝐄
+
+🤖𝐐𝐔𝐎𝐓𝐄𝐒
+
+🤖𝐃𝐀𝐑𝐊𝐉𝐎𝐊𝐄
+
+ *━━━━━━〈  🎐 𝐅𝐔𝐍 🎐  〉━━━━━━*
+
+🙊𝐑𝐄𝐀𝐂𝐓𝐈𝐎𝐍
+
+🙊𝐓𝐑𝐔𝐓𝐇
+
+🙈𝐃𝐀𝐑𝐄
+
+🙈𝐂𝐎𝐔𝐏𝐋𝐄
+
+🙈𝐒𝐎𝐔𝐋𝐌𝐀𝐓𝐄
+
+🙉𝐇𝐀𝐍𝐃𝐒𝐎𝐌𝐄𝐂𝐇𝐄𝐂𝐊
+
+🙊𝐁𝐄𝐀𝐔𝐓𝐈𝐅𝐔𝐋𝐂𝐇𝐄𝐂𝐊
+
+🙊𝐀𝐖𝐄𝐒𝐎𝐌𝐄𝐂𝐇𝐄𝐂𝐊
+
+🙊𝐆𝐑𝐄𝐀𝐓𝐂𝐇𝐄𝐂𝐊
+
+🙉𝐆𝐀𝐘𝐂𝐇𝐄𝐂𝐊
+
+🙈𝐂𝐔𝐓𝐄𝐂𝐇𝐄𝐂𝐊
+
+🙊𝐋𝐄𝐒𝐁𝐀𝐈𝐍𝐂𝐇𝐄𝐂𝐊
+
+🙈𝐇𝐎𝐑𝐍𝐘𝐂𝐇𝐄𝐂𝐊
+
+🙈𝐏𝐑𝐄𝐄𝐓𝐘𝐂𝐇𝐄𝐂𝐊
+
+🙈𝐋𝐎𝐕𝐄𝐋𝐘𝐂𝐇𝐄𝐂𝐊
+
+🙊𝐔𝐆𝐋𝐘𝐂𝐇𝐄𝐂𝐊
+
+🙉𝐂𝐇𝐀𝐑𝐀𝐂𝐓𝐄𝐑𝐂𝐇𝐄𝐂𝐊
+
+ *━━━━━━〈  🪁 𝐄𝐒𝐒𝐄𝐍𝐓𝐈𝐀𝐋𝐒 🪁  〉━━━━━━*
+
+👾𝐓𝐑𝐀𝐍𝐒𝐋𝐀𝐓𝐄
+
+👾𝐅𝐋𝐈𝐏𝐓𝐄𝐗𝐓
+
+👾𝐓𝐎𝐋𝐄𝐓𝐓𝐄𝐑
+
+ *━━━━━━〈  💥 𝐍𝐒𝐅𝐖 💥  〉━━━━━━*
+
+🍁 𝑻𝒀𝑷𝑬 " *${prefix}nsfw* " 𝑻𝑯𝑬𝑵 𝑬𝑵𝑨𝑩𝑳𝑬 𝑵𝑺𝑭𝑾 (𝑻𝑯𝑰𝑺 𝑭𝑬𝑨𝑻𝑼𝑹𝑬 𝑼𝑺𝑬 𝑶𝑵𝑳𝒀 𝑨𝑫𝑴𝑰𝑵!) 
+
+🍁 𝑻𝑯𝑬𝑵 𝑻𝒀𝑷𝑬 " *${prefix}nsfwmenu* " 𝑻𝑶 𝑮𝑬𝑻 𝑭𝑼𝑳𝑳 𝑳𝑰𝑺𝑻 𝑶𝑭 𝑵𝑺𝑭𝑾 𝑪𝑶𝑴𝑴𝑨𝑵𝑫𝑺
+
+😹🤪𝑭𝑼𝑳𝑳 𝑵𝑶𝑼𝑮𝑯𝑻𝒀 𝑯𝑶 𝑱𝑨𝑶 𝑫𝑬𝑲𝑯 𝑲𝑹 
 
 
 
  『  *${global.BotName}*  』
- Powered by: *Fantox*
+ 𝑷𝑶𝑾𝑬𝑹𝑬𝑫 𝑩𝒀➪ *𝐂𝐇𝐈𝐑𝐀𝐆 𝐘𝐎𝐔𝐓𝐔𝐁𝐄𝐑*
 
- 🔰 To use any of these commands type 
+ 💥 𝑼𝑺𝑬 𝑨𝑵𝒀 𝑪𝑶𝑴𝑴𝑨𝑵𝑫 𝑻𝒀𝑷𝑬 𝑻𝑯𝑰𝑺 𝑭𝑶𝑹𝑴𝑨𝑻 👇 
  " *${prefix}<Command name>* ".
  
- 🔰 To get Support Group link type " *${prefix}support* ".
+ 💥 𝑻𝒀𝑷𝑬 𝑺𝑼𝑷𝑷𝑶𝑹𝑻 𝑮𝑬𝑻 𝑺𝑼𝑷𝑷𝑶𝑹𝑻 𝑳𝑰𝑵𝑲 " *${prefix}support* ".
 
- 🔰 Type " *${prefix}help* " to get full command list.`
+ 💥 𝑻𝒀𝑷𝑬 " *${prefix}help* " 𝑻𝑶 𝑮𝑬𝑻 𝑭𝑼𝑳𝑳 𝑳𝑰𝑺𝑻 𝑶𝑭 𝑪𝑶𝑴𝑴𝑨𝑵𝑫𝑺.`
      
  let buttonshelpm = [
     {buttonId: `-owner`, buttonText: {displayText: 'Bot Owner'}, type: 1}
@@ -4992,7 +5258,28 @@ break
 
 default:
 
-    
+/*
+    if (!isCmd && !isGroup){
+        const botreply = await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${budy}]`)
+       txt = `${botreply.data.cnt}`
+       m.reply(txt)
+
+  }
+
+*/
+
+  if (!isCmd&&!isGroup){
+    await axios.get(`http://api.brainshop.ai/get?bid=165801&key=1ftAuFL7Fhj21Fyp&uid=[uid]&msg=${budy}]`)
+.then((response) => {
+        txt = `${response.data.cnt}`
+
+       m.reply(txt);
+
+    })
+}
+
+
+
 if (budy.startsWith('=>')) {
 if (!isCreator) return reply(mess.botowner)
 function Return(sul) {
@@ -5039,7 +5326,7 @@ if (!(budy.toLowerCase() in msgs)) return
 Miku.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 }
 }
-}catch (err) {
+} catch (err) {
 Miku.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), {quoted:m})
 console.log(err)
 }
