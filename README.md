@@ -3,13 +3,13 @@
     <img src="https://c.tenor.com/NJVFjOYEcsIAAAAC/miku-gotoubun.gif" width="610">
      
 </p>
-<h1 align="center"> 
-</h1> 𝐌𝐈𝐊𝐔-𝐕2
+<h1 align="center"> 𝐌𝐈𝐊𝐔-𝐕2 🌈❤️
+</h1> 
 <p align="center"> 
-  Konochiwa Senpai, I am "Miku Nakano" a WhatsApp bot made by Fantox to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+  𝐇𝐄𝐋𝐋𝐎 𝐆𝐔𝐘𝐒 , 𝐈 𝐀𝐌 𝐌𝐈𝐊𝐔 𝐕2 𝐂𝐑𝐄𝐀𝐓𝐄𝐃 𝐁𝐘 𝐂𝐇𝐈𝐑𝐀𝐆 𝐘𝐎𝐔𝐓𝐔𝐁𝐄𝐑. 𝐅𝐔𝐋𝐋𝐘 𝐁𝐀𝐒𝐄𝐃 𝐎𝐍 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄 (𝐌𝐃)
 
 <p align="center">
-  <a href="https://github.com/FantoX001/Miku-MD/fork">
+  <a href="https://github.com/LOSTHACKEROFC/MIKU-V2/fork">
     <img src="https://img.shields.io/github/forks/FantoX001/Miku-MD?label=Fork&style=social">
     
     
