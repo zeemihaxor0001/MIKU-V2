@@ -1,6 +1,6 @@
 <p align="center">
    <a href="https://github.com/LOSTHACKEROFC">
-   <img src="https://tenor.com/view/miku-nakano-nakano-miku-gif-20520948">
+   <img src="https://i.imgur.com/QlGoQsb.jpeg">
 
 </p>
 <h1 align="center"> 𝐌𝐈𝐊𝐔-𝐕2 🌈❤️
