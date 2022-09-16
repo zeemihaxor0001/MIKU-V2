@@ -1,6 +1,6 @@
 <p align="center">
    <a href="https://github.com/LOSTHACKEROFC">
-    <img src="https://c.tenor.com/NJVFjOYEcsIAAAAC/miku-gotoubun.gif" width="610">
+    <img src="https://giphy.com/gifs/vocaloid-miku-hatsune-1BguPjlFLzWj6" width="610">
      
 </p>
 <h1 align="center"> 𝐌𝐈𝐊𝐔-𝐕2 🌈❤️
