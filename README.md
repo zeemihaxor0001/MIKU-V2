@@ -105,7 +105,7 @@ heroku/nodejs
 
 ## ✧✧✧ Join My Whatsapp Group for Support
 
-<a href="[https://chat.whatsapp.com/DSTm5Xmx3iaIgDh2gqLsWP]"><img src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="https://chat.whatsapp.com/DSTm5Xmx3iaIgDh2gqLsWP"><img src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </a>
 
 ## ✧✧✧ CMD Deployment Method
