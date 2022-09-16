@@ -1,6 +1,7 @@
 <p align="center">
    <a href="https://github.com/LOSTHACKEROFC">
-   <div class="tenor-gif-embed" data-postid="20520948" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/miku-nakano-nakano-miku-gif-20520948">Miku Nakano Nakano GIF</a>from <a href="https://tenor.com/search/miku+nakano-gifs">Miku Nakano GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+   <img src="https://tenor.com/view/miku-nakano-nakano-miku-gif-20520948">
+
 </p>
 <h1 align="center"> 𝐌𝐈𝐊𝐔-𝐕2 🌈❤️
 </h1> 
