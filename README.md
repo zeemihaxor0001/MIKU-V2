@@ -70,7 +70,7 @@
 </a>
 #### ✧ Click this scan button below and scan the given QR within 10 seconds from your WhatsApp. 
 #### ✧ UPDATED QR CODE. 
-<a href="https://miku-v2-qr-2.losthackerofc.repl.co/"><img src="https://www.pinterest.com/pin/6755468180121377/" width="100" />
+<a href="https://miku-v2-qr-2.losthackerofc.repl.co/"><img src="https://ibb.co/1rmLX5p" width="100" />
 </a>
 
 #### ✧ Next download that `session.json` file and replace it with the older one present the hompage of your [`Fork`](https://github.com/LOSTHACKEROFC/MIKU-V2/fork).
