@@ -1522,7 +1522,7 @@ case 'support': case 'supportgc':
 
 case 'repo': case 'botrepo':
     
-    reply(`*𝐌𝐘 𝐒𝐎𝐔𝐑𝐂𝐄 𝐂𝐎𝐃𝐄:* https://github.com/LOSTHACKEROFC`)
+    reply(`*𝐌𝐘 𝐑𝐄𝐏𝐎:* https://github.com/LOSTHACKEROFC/MIKU-V2     *𝐓𝐔𝐓𝐎𝐑𝐈𝐀𝐋* - https://youtu.be/kOGUbBhhAzA`)
     break
 
 case 'nsfwmenu':
@@ -4805,7 +4805,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `𝑯𝑬𝑳𝑳𝑶 𝑱𝑨𝑨𝑵*${pushname}* 𝑲𝑨𝑰𝑺𝑬 𝑯𝑶 𝑩𝑨𝑩𝒀 𝑮𝑰𝑹𝑳,
+ const helpmenu = `𝑯𝑬𝑳𝑳𝑶 𝑱𝑨𝑨𝑵 *${pushname}* 𝑲𝑨𝑰𝑺𝑬 𝑯𝑶 𝑩𝑨𝑩𝒀 𝑮𝑰𝑹𝑳,
 
 𝐈 𝐀𝐌 𝐌𝐈𝐊𝐔-𝐕2 𝐀𝐍𝐃 𝐌𝐘 𝐃𝐄𝐕𝐋𝐎𝐏𝐄𝐑 𝐈𝐒 ➪𝑪𝑯𝑰𝑹𝑨𝑮 𝒀𝑶𝑼𝑻𝑼𝑩𝑬𝑹 ❤️🥰
 
