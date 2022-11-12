@@ -1522,7 +1522,7 @@ case 'support': case 'supportgc':
 
 case 'repo': case 'botrepo':
     
-    reply(`*𝐌𝐘 𝐑𝐄𝐏𝐎:* https://github.com/LOSTHACKEROFC/MIKU-V2     *𝐓𝐔𝐓𝐎𝐑𝐈𝐀𝐋* - https://youtu.be/kOGUbBhhAzA`)
+    reply(`*𝐌𝐘 𝐑𝐄𝐏𝐎:* https://github.com/LOSTHACKEROFC/MIKU-V2               *𝐓𝐔𝐓𝐎𝐑𝐈𝐀𝐋* - https://youtu.be/kOGUbBhhAzA`)
     break
 
 case 'nsfwmenu':
