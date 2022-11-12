@@ -1517,18 +1517,23 @@ break
 
 case 'support': case 'supportgc':
     
-    reply(`*𝐌𝐘 𝐃𝐄𝐕𝐋𝐎𝐏𝐄𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝑫𝑶 𝑵𝑶𝑻 𝑭𝑶𝑹𝑮𝑬𝑻 𝑻𝑶 𝑺𝑼𝑩𝑺𝑪𝑹𝑰𝑩𝑬 ➪:* http://youtube.com/c/chiragyoutuber.`)
+    reply(`*𝐌𝐘 𝐃𝐄𝐕𝐋𝐎𝐏𝐄𝐑 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝑫𝑶 𝑵𝑶𝑻 𝑭𝑶𝑹𝑮𝑬𝑻 𝑻𝑶 𝑺𝑼𝑩𝑺𝑪𝑹𝑰𝑩𝑬 ➪:* http://youtube.com/c/chiragyoutuber 
+    𝐅𝐎𝐋𝐋𝐎𝐖 𝐌𝐄 𝐎𝐍 𝐆𝐈𝐓𝐇𝐔𝐁 😁❤️
+*𝐌𝐘 𝐑𝐄𝐏𝐎:* https://github.com/LOSTHACKEROFC/MIKU-V2               
+
+𝐃𝐎 𝐍𝐎𝐓 𝐅𝐎𝐑𝐆𝐄𝐓 𝐓𝐎 𝐒𝐔𝐁𝐒𝐂𝐑𝐈𝐁𝐄 𝐌𝐘 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🥺💞
+
+*𝐓𝐔𝐓𝐎𝐑𝐈𝐀𝐋* - https://youtu.be/kOGUbBhhAzA`)
     break
 
 case 'repo': case 'botrepo':
      
-     reply(`*𝐌𝐘 𝐓𝐔𝐓𝐎𝐑𝐈𝐀𝐋*: https://youtu.be/kOGUbBhhAzA`)
-     break
+     reply(`𝐅𝐎𝐋𝐋𝐎𝐖 𝐌𝐄 𝐎𝐍 𝐆𝐈𝐓𝐇𝐔𝐁 😁❤️
+*𝐌𝐘 𝐑𝐄𝐏𝐎:* https://github.com/LOSTHACKEROFC/MIKU-V2               
 
-case 'repo': case 'botrepo':
-        
-    reply(`*𝐌𝐘 𝐑𝐄𝐏𝐎:* https://github.com/LOSTHACKEROFC/MIKU-V2`)
-    break
+𝐃𝐎 𝐍𝐎𝐓 𝐅𝐎𝐑𝐆𝐄𝐓 𝐓𝐎 𝐒𝐔𝐁𝐒𝐂𝐑𝐈𝐁𝐄 𝐌𝐘 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🥺💞
+
+*𝐓𝐔𝐓𝐎𝐑𝐈𝐀𝐋* - https://youtu.be/kOGUbBhhAzA`)
 
 case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
